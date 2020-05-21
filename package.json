@@ -1,11 +1,15 @@
 {
   "name": "react-summernote-personal",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "rain",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lvyuanying/react-summernote-personal.git"
+  },
   "license": "ISC"
 }
