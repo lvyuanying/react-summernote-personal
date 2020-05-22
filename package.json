@@ -1,6 +1,6 @@
 {
   "name": "react-summernote-personal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -13,6 +13,10 @@
     "type": "git",
     "url": "https://github.com/lvyuanying/react-summernote-personal.git"
   },
+  "keywords": [
+    "react",
+    "summernote"
+  ],
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.9.6",
