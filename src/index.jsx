@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactSummernote from './react-summernote'
-import styles from './react-summernote.less'
+import './react-summernote.css'
 import './summernote-zh-CN'
 
 
@@ -60,11 +60,14 @@ class RichTextEditor extends Component {
     let that = this
     $files.each(async function(){
         var file = this
-        let res = await that.props.getToken()
-        const url = that.props.action
         let _form = new FormData()
+        const url = that.props.action
         _form.append(`file`, file)
-        _form.append('token', res.data.token)
+        
+        if (that.props.getToken) {
+          let res = await that.props.getToken()
+          _form.append('token', res.data.token)
+        }
 
         let response = await fetch(url, {
             method: 'POST',
