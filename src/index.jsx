@@ -76,7 +76,8 @@ class RichTextEditor extends Component {
         let result = await response.json()
         
         let imgNode = new Image()
-        imgNode.src = result[that.props.responseKey] || result.url
+        imgNode.src = that.props.getResponse ? that.props.getResponse(result) : result.url
+        // imgNode.src = result[that.props.responseKey]
         that.summernote.current.insertNode(imgNode)
     })
   }

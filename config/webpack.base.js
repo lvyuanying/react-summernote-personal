@@ -16,10 +16,21 @@ module.exports = {
             },
             {
                 test: /\.(ttf|eot|woff|woff2)$/,
-                loader: 'file-loader',
-                options: {
-                    name: 'fonts/[name].[ext]'
-                }
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            name: 'fonts/[name].[ext]',
+                            limit: 20000,
+                            publicPath: "fonts/",
+                            outputPath: "fonts/"
+                        }
+                    }
+                ]
+                // loader: 'file-loader',
+                // options: {
+                //     name: 'fonts/[name].[ext]'
+                // }
             },
             {
                 test: /\.css$/,
