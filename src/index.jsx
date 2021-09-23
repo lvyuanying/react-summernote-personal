@@ -67,6 +67,7 @@ class RichTextEditor extends Component {
         if (that.props.getToken) {
           let res = await that.props.getToken()
           _form.append('token', res.data.token)
+          _form.append('key', res.data.key)
         }
 
         let response = await fetch(url, {
